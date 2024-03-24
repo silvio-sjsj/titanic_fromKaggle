@@ -1,8 +1,7 @@
 """Machine Learning model for predicting survivors of Titanic's disaster"""
 import pandas as pd
 from kaggle.titanic.functions import download_titanic_data
-#from kaggle.titanic.preprocessing import Preprocessor
-from kaggle.titanic.preprocessing2 import Preprocessor
+from kaggle.titanic.preprocessing import Preprocessor
 from kaggle.titanic.functions import LOCAL_PATH, TITANIC_PATH
 from scipy.stats import expon, loguniform
 from sklearn.ensemble import RandomForestRegressor
@@ -21,8 +20,6 @@ titanic_data = train_data.drop("Survived", axis=1)
 titanic_labels = train_data["Survived"].copy()
 
 preprocessor = Preprocessor()
-X_train = preprocessor.fit_transform(titanic_data)
-y_train = titanic_labels
 
 param_distribs = {
         'svc__kernel': ['linear', 'rbf'],

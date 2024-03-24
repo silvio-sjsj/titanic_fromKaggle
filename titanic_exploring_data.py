@@ -4,7 +4,7 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from kaggle.titanic.functions import cramers_v, save_fig, download_titanic_data, IMAGES_PATH, LOCAL_PATH, TITANIC_PATH, TITANIC_URL
+from kaggle.titanic.functions import cramers_v, save_fig, download_titanic_data
 
 sns.set_theme(style="whitegrid")
 sns.set(font_scale = 1)
